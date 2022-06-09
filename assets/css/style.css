@@ -66,10 +66,41 @@ aside ul{
 .full h2{
     padding: 15px 0;
 }
+.comment{
+    padding: 10px;
+    border: 1px black solid;
+    border-radius: 15px;
+}
+.comment h2{
+    padding-bottom: 10px;
+}
+.comment_flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comment_content{
+    width: 90%;
+    padding: 5px 10px;
+    border: 1px gray solid;
+    border-radius: 15px;
+}
+.comment_form{
+    display: flex;
+    justify-content: space-around;
+}
 footer{
     margin-top: 10px;
     padding: 10px 0;
     background-color: rgb(233, 32, 32);
     color: white;
     text-align: center;
+}
+form{
+    padding-top: 15px;
+}
+form input, form button{
+    border-radius: 5px;
+    border: 1px black solid;
+    padding: 5px;
 }
