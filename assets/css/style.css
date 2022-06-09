@@ -23,10 +23,11 @@ header p{
     padding: 20px;
 }
 main{
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 aside ul{
     padding: 15px;
+    font-size: 18px;
 }
 .partenaire_flex{
     display: flex;
@@ -43,19 +44,25 @@ aside ul{
 .card{
     height: 380px;
     margin-top: 10px;
-    padding: 15px;
+    padding: 10px 15px;
     border: 1px gray solid;
     border-radius: 10px;
 }
 .card img{
-    width: 100%;
+    width: 90%;
+    align-self: center;
 }
 .card h3{
     font-size: 20px;
 }
-.card a{
+.card_info{
+    display: flex;
+    flex-direction: column;
+}
+.card_info a{
     align-self: flex-end;
     text-decoration: none;
+    margin-top: 10px;
     padding: 5px;
     border: 1px black solid;
     border-radius: 10px;
@@ -89,13 +96,6 @@ aside ul{
     display: flex;
     justify-content: space-around;
 }
-footer{
-    margin-top: 10px;
-    padding: 10px 0;
-    background-color: rgb(233, 32, 32);
-    color: white;
-    text-align: center;
-}
 form{
     padding-top: 15px;
 }
@@ -103,4 +103,38 @@ form input, form button{
     border-radius: 5px;
     border: 1px black solid;
     padding: 5px;
+}
+footer{
+    padding: 10px 0;
+    background-color: rgb(233, 32, 32);
+    color: white;
+    text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+    header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header p{
+        font-size: 20px;
+    }
+    header a{
+        width: 15%;
+    }
+    .card{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+        height: 180px;
+    }
+    .card img{
+        width: 35%;
+    }
+    .card_info{
+        width: 60%;
+    }
+    .card_info h3{
+        height: 70%;
+    }
 }
