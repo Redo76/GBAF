@@ -4,6 +4,7 @@ CREATE DATABASE `GBAF` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 CREATE TABLE `account` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
+  `e_mail` varchar(100) NOT NULL,
   `nom` varchar(100) NOT NULL,
   `prenom` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,

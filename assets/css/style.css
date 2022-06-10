@@ -61,6 +61,14 @@ header ul{
     box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
     outline: 0;
 }
+.deco{
+    background-color: brown;
+    color: white;
+}
+
+.deco:hover{
+    color: brown;
+}
 
 main{
     padding: 10px 20px;
@@ -81,31 +89,36 @@ aside ul{
     flex-direction: column;
     justify-content: space-around;
 }
-.card{
+.miniature{
     height: 380px;
     margin-top: 10px;
     padding: 10px 15px;
     border: 1px gray solid;
     border-radius: 10px;
 }
-.card img{
+.miniature img{
     width: 90%;
     align-self: center;
 }
-.card h3{
+.miniature h3{
     font-size: 20px;
 }
-.card_info{
+.miniature_info{
     display: flex;
     flex-direction: column;
 }
-.card_info a{
+.miniature_info a{
     align-self: flex-end;
     text-decoration: none;
     margin-top: 10px;
     padding: 5px;
     border: 1px black solid;
     border-radius: 10px;
+    color: brown;
+}
+.miniature_info a:hover{
+    background-color: brown;
+    color: white;
 }
 .full{
     padding-top: 15px;
@@ -165,19 +178,19 @@ footer{
     main{
         padding: 20px 30px;
     }
-    .card{
+    .miniature{
         flex-direction: row;
         justify-content: space-around;
         padding: 10px;
         height: 180px;
     }
-    .card img{
+    .miniature img{
         width: 35%;
     }
-    .card_info{
+    .miniature_info{
         width: 60%;
     }
-    .card_info h3{
+    .miniature_info h3{
         height: 70%;
     }
 }
@@ -192,9 +205,8 @@ footer{
     main{
         padding: 30px 40px;
     }
-    .card{
+    .miniature{
         height: 220px;
     }
 }
-<!-- HTML !-->
-<button class="button-13" role="button">Button 13</button>
+
