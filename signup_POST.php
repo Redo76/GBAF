@@ -7,27 +7,12 @@ $prenom = strip_tags($_POST['prenom']);
 $nom = strip_tags($_POST['nom']);
 $password = strip_tags($_POST['mdp']);
 $confirmPassword = strip_tags($_POST['mdpconf']);
-$email = strip_tags($_POST['email']);
 $pseudo = strip_tags($_POST['pseudo']);
 
 // On stocke les variables en session pour pouvoir les réafficher lorsqu'il y a une erreur dans le formulaire
-$_SESSION['signupEmail'] = $email;
 $_SESSION['signupPrenom'] = $prenom;
 $_SESSION['signupNom'] = $nom;
 $_SESSION['signupPseudo'] = $pseudo;
-
-// Création d'une fonction qui retourne VRAI lorsque l'email que l'on rentre dans le formulaire est le même que dans la base de données
-function alreadyEmail($db, $email){
-    $e_mailBDD = $db -> prepare('SELECT e_mail FROM accounts');
-    $e_mailBDD -> execute();
-    $emailsUser = $e_mailBDD -> fetchAll();
-    foreach ($emailsUser as $emailUser) {
-        if ($emailUser['e_mail'] === $email) {
-            return true;
-        }
-    }
-    return false;
-} 
 
 // Création d'une fonction qui retourne VRAI lorsque l'email que l'on rentre dans le formulaire est le même que dans la base de données
 function alreadyPseudo($db, $pseudo){
@@ -71,11 +56,6 @@ else if ($prenom === '' || $nom === '' || $password === '' || $confirmPassword =
 }
 
 else {
-    if (alreadyEmail($db, $email)) {
-        $_SESSION['emailAlreadyExist'] = true;
-        header('Location: /signup.php');
-        return;
-    }
     if (alreadyPseudo($db, $pseudo)) {
         $_SESSION['pseudoAlreadyExist'] = true;
         header('Location: /signup.php');

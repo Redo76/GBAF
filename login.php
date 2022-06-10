@@ -9,12 +9,12 @@
 
 <form method="POST" action="login_POST.php" class="container mt-5">
     <div class="mb-3">
-        <label for="email" class="form-label">Adresse e-mail</label>
-        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+        <label for="pseudo" class="form-label">Pseudo</label>
+        <input type="text" class="form-control" name="pseudo" id="pseudo">
 
         <?php if (isset($_SESSION['erreurEmail'])) : ?>
             <div class="alert alert-danger" role="alert">
-                E-mail Incorrecte !
+                Pseudo Incorrect !
             </div>
             <?php unset($_SESSION['erreurEmail']); ?>
         <?php endif ?>

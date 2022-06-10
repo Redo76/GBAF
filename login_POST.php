@@ -4,7 +4,7 @@ session_start();
 
 include_once('variables.php');
 
-$email = strip_tags($_POST['email']); 
+$pseudo = strip_tags($_POST['pseudo']); 
 $password = strip_tags($_POST['mdp']);
 
 if ( !isset($email) || !isset($password )) {
@@ -12,17 +12,17 @@ if ( !isset($email) || !isset($password )) {
     header('Location: /login.php');
 }
 
-function getUser($accounts, $email){
+function getUser($accounts, $pseudo){
     $accounts;
     foreach ($accounts as $account) {
-        if ($account['e_mail'] === $email) {
+        if ($account['username'] === $pseudo) {
             return $account;
         }
     }
     return false;
 } 
 
-$getUser = getUser($accounts, $email);
+$getUser = getUser($accounts, $pseudo);
 
 if (!$getUser) {
     $_SESSION['erreurEmail'] = true;
