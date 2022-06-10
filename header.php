@@ -2,7 +2,7 @@
 
 session_start();
 
-
+changecinclude_once('variables.php');
 
 ?>
 
@@ -18,6 +18,24 @@ session_start();
 <body>
     <header>
         <a href="./index.html"><img src="./assets/img/gbaf.png" alt="Logo du GBAF"></a>
-        <p>Nom & Prénom</p>
+        <nav>
+            <?php if (isset($_SESSION['loggedUser'])) : ?> 
+                <p>Nom & Prénom</p>
+                <ul>
+                    <li>
+                        <a href="./logout.php" class="button-13">Déconnexion</a>
+                    </li>
+                </ul>
+            <?php else : ?> 
+                    <ul>
+                        <li>
+                            <a href="./signup.php" class="button-13">S'inscrire</a>
+                        </li>
+                        <li>
+                            <a href="./login.php" class="button-13">Connexion</a>
+                        </li>
+                    </ul>
+            <?php endif ?>
+        </nav>
     </header>
     <main>

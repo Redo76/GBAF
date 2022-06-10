@@ -1,6 +1,6 @@
 <?php
 
-include_once('PDO');
+include_once('PDO.php');
 
 $accountsBDD = $db -> prepare('SELECT * FROM accounts');
 $accountsBDD -> execute();
