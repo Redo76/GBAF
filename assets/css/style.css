@@ -157,6 +157,9 @@ form input, form button{
     border: 1px black solid;
     padding: 5px;
 }
+form button{
+    width: 180px;
+}
 footer{
     padding: 10px 0;
     background-color: rgb(233, 32, 32);
@@ -209,4 +212,5 @@ footer{
         height: 220px;
     }
 }
+
 

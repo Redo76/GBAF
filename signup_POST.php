@@ -8,6 +8,8 @@ $nom = strip_tags($_POST['nom']);
 $password = strip_tags($_POST['mdp']);
 $confirmPassword = strip_tags($_POST['mdpconf']);
 $pseudo = strip_tags($_POST['pseudo']);
+$question = $_POST['question'];
+$reponse = strip_tags($_POST['reponse']);
 
 // On stocke les variables en session pour pouvoir les réafficher lorsqu'il y a une erreur dans le formulaire
 $_SESSION['signupPrenom'] = $prenom;
@@ -27,6 +29,9 @@ function alreadyPseudo($db, $pseudo){
     return false;
 } 
 
+function getValueSelect($question){
+    
+}
 
 $regexMdp = preg_match('%^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$%', $password);
 

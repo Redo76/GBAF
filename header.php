@@ -30,14 +30,11 @@ include_once('variables.php');
                     </li>
                 </ul>
             <?php else : ?> 
-                    <ul>
-                        <li>
-                            <a href="./signup.php" class="button-13">S'inscrire</a>
-                        </li>
-                        <li>
-                            <a href="./login.php" class="button-13">Connexion</a>
-                        </li>
-                    </ul>
+                <ul>
+                    <li>
+                        <a href="./signup.php" class="button-13">S'inscrire</a>
+                    </li>
+                </ul>
             <?php endif ?>
         </nav>
     </header>

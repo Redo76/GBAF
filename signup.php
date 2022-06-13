@@ -62,18 +62,18 @@ if (isset($_SESSION['signupEmail'])) {
                 <?php unset($_SESSION['confirmPassword']); ?>
             <?php endif ?>
     </div>
-    <select name="" id=""></select>
+    <div class="mb-3 d-flex flex-column">
+        <label for="question">Question secrète</label>
+        <select name="question" id="question">
+            <option value="ville">Votre lieu de naissance</option>
+            <option value="secondPrenom">Votre second prénom</option>
+            <option value="couleur">Votre couleur préféré</option>
+            <option value="animal">Votre animal préféré</option>
+        </select>
+    </div>
     <div class="mb-3">
             <label for="reponse" class="form-label">Réponse</label>
-            <input type="text" class="form-control" name="reponse" id="reponse">
-            
-            <?php if (isset($_SESSION['emailAlreadyExist'])) : ?>
-                <div class="alert alert-danger" role="alert">
-                    Cet e-mail existe déja !
-                </div>
-                <?php unset($_SESSION['emailAlreadyExist']); ?>
-            <?php endif ?>
-        
+            <input type="text" class="form-control" name="reponse" id="reponse">  
     </div>
     <button type="submit" class="btn btn-primary">S'inscrire</button>
             
